@@ -8,7 +8,7 @@ case class FirebaseException(s: String) extends Exception(s)
 object Firebase {
   private val credentials : InputStream = getClass.getResourceAsStream("./serviceAccountKey.json")
   private val options = new FirebaseOptions.Builder()
-    .setDatabaseUrl("https://sourcing-stratups.firebaseio.com/")
+    .setDatabaseUrl("https://sourcing-stratups.firebaseio.com")
     .setServiceAccount(credentials)
     .build()
   FirebaseApp.initializeApp(options)
@@ -16,4 +16,9 @@ object Firebase {
   def ref(path: String): DatabaseReference = database.getReference(path)
 }
 
-val ref = Firebase.ref("/entreprises")
+
+val database = Firebase
+//val ref = database.ref("/entreprises")
+
+
+

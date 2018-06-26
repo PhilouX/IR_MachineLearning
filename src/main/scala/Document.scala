@@ -1,5 +1,7 @@
 
 class Document {
+
+
   var entreprise = "à remplir";
   var url = "à remplir";
   var descriptif = "à remplir";
